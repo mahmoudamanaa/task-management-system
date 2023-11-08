@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 4rem;
+  background-color: var(--darkblue);
+  color: var(--lightblue);
+}
+
+.nav h1 {
+  font-size: 2rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav a,
+.nav a:visited,
+.nav a:focus {
+  color: var(--lightblue);
+}
+
+.nav a:global(.active),
+.nav a:hover {
+  color: var(--middleblue);
+}
