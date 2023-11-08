@@ -1,0 +1,46 @@
+.form {
+  margin-top: 1rem;
+}
+
+.form .formAction {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .formAction label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.form .formAction input,
+.form .formAction select,
+.form .formAction textarea,
+.form .formAction button {
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--middleblue);
+  color: var(--darkblue);
+}
+
+.form .formAction input:focus,
+.form .formAction select:focus,
+.form .formAction textarea:focus {
+  border: 0.2rem solid var(--darkblue);
+  outline: none;
+}
+
+.form .formAction button {
+  cursor: pointer;
+  background-color: var(--middleblue);
+  color: white;
+}
+
+.form p {
+  color: darkred;
+}
+
+.form .formAction .inputError {
+  border: 0.2rem solid darkred;
+}
