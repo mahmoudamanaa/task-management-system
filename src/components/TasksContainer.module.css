@@ -1,0 +1,11 @@
+.tasksContainer {
+  padding: 0.8rem;
+  background-color: var(--darkblue);
+  color: var(--lightblue);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.tasksContainer h1 {
+  margin-bottom: 1.5rem;
+}

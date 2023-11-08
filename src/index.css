@@ -1,9 +1,18 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --lightblue: #8ecae6;
+  --middleblue: #219ebc;
+  --darkblue: #023047;
+  --yellow: #ffb703;
+  --orange: #fb8500;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  padding: 0.8rem 4rem;
 }

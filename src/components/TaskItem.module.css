@@ -1,0 +1,16 @@
+.taskItem {
+  background-color: var(--lightblue);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  color: var(--darkblue);
+  padding: 0.8rem;
+}
+
+.taskItem .priority {
+  background-color: var(--yellow);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}

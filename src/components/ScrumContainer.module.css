@@ -1,0 +1,10 @@
+.scrumContainer {
+  background-color: var(--lightblue);
+  color: var(--darkblue);
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-radius: 0.5rem;
+  gap: 1.5rem;
+}
