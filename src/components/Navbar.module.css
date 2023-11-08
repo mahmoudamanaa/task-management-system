@@ -28,10 +28,7 @@
   color: var(--lightblue);
 }
 
+.nav a:global(.active),
 .nav a:hover {
-  color: var(--middleblue);
-}
-
-.nav a:global(.active) {
   color: var(--middleblue);
 }
