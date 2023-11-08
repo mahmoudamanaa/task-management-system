@@ -1,0 +1,6 @@
+.formContainer {
+  background-color: var(--lightblue);
+  color: var(--darkblue);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}

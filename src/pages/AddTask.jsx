@@ -1,3 +1,9 @@
+import FormContainer from "../components/FormContainer";
+
 export default function AddTask() {
-  return <div>AddTask</div>;
+  return (
+    <main>
+      <FormContainer />
+    </main>
+  );
 }
