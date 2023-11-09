@@ -1,3 +1,9 @@
+import BacklogContainer from "../components/BacklogContainer";
+
 export default function Backlog() {
-  return <div>Backlog</div>;
+  return (
+    <main>
+      <BacklogContainer />
+    </main>
+  );
 }

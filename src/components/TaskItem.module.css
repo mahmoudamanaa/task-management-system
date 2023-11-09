@@ -6,6 +6,16 @@
   padding: 0.8rem;
 }
 
+.taskItemBacklog {
+  margin-top: 1rem;
+  background-color: var(--darkblue);
+  color: var(--lightblue);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
 .taskItem .priority {
   background-color: var(--yellow);
   margin: 0.5rem 0;
@@ -13,4 +23,18 @@
   border-radius: 0.5rem;
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+.taskItem .priorityBacklog {
+  color: var(--darkblue);
+}
+
+.taskItem .status {
+  background-color: var(--yellow);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--darkblue);
 }
