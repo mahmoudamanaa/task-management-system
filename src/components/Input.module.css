@@ -1,0 +1,32 @@
+.formAction {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.formAction label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.formAction input {
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--middleblue);
+  color: var(--darkblue);
+}
+
+.formAction input:focus {
+  border: 0.2rem solid var(--darkblue);
+  outline: none;
+}
+
+.formAction p {
+  color: darkred;
+}
+
+.formAction .inputError {
+  border: 0.2rem solid darkred;
+}

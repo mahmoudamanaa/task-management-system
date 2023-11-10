@@ -38,3 +38,10 @@
   font-size: 1.1rem;
   color: var(--darkblue);
 }
+
+.taskItem .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}

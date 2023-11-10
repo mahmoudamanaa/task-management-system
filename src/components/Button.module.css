@@ -1,0 +1,19 @@
+.formAction {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.formAction button {
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--middleblue);
+  color: var(--darkblue);
+}
+
+.formAction button {
+  cursor: pointer;
+  background-color: var(--middleblue);
+  color: white;
+}
