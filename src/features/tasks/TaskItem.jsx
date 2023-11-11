@@ -1,12 +1,21 @@
 import styles from "./TaskItem.module.css";
 
-import Button from "./Button";
-import { useTasks } from "../contexts/TasksContext";
-import { usePopup } from "../contexts/PopupContext";
-import Form from "./Form";
+import Button from "../../ui/form/Button";
+import { useTasks } from "../../contexts/TasksContext";
+import { usePopup } from "../../contexts/PopupContext";
+import Form from "../../ui/form/Form";
 
 export default function TaskItem({ task, backlog }) {
-  const { title, priority, description, status, deadline, id } = task;
+  const {
+    title,
+    priority,
+    description,
+    status,
+    deadline,
+    assignee,
+    category,
+    id,
+  } = task;
 
   const { deleteTask } = useTasks();
   const { openPopup } = usePopup();
@@ -24,6 +33,8 @@ export default function TaskItem({ task, backlog }) {
     >
       <h3>{title}</h3>
       <p>Deadline: {deadline}</p>
+      <p>Assignee: {assignee}</p>
+      <p>Category: {category}</p>
       <p
         className={`${styles.priority} ${
           backlog ? styles.priorityBacklog : ""

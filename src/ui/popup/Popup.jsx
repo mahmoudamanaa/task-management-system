@@ -1,7 +1,7 @@
 import styles from "./Popup.module.css";
 
-import Button from "./Button";
-import { usePopup } from "../contexts/PopupContext";
+import Button from "../form/Button";
+import { usePopup } from "../../contexts/PopupContext";
 
 export default function Popup() {
   const { open, element, closePopup } = usePopup();

@@ -1,4 +1,4 @@
-import ScrumContainer from "../components/ScrumContainer";
+import ScrumContainer from "../ui/scrum/ScrumContainer";
 
 export default function Home() {
   return (

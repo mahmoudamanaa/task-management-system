@@ -1,4 +1,4 @@
-import BacklogContainer from "../components/BacklogContainer";
+import BacklogContainer from "../features/backlog/BacklogContainer";
 
 export default function Backlog() {
   return (

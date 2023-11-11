@@ -5,7 +5,15 @@ const TasksContext = createContext();
 export function TasksProvider({ children }) {
   const [tasks, setTasks] = useState([]);
 
-  function addTask(title, deadline, status, priority, description) {
+  function addTask(
+    title,
+    deadline,
+    status,
+    priority,
+    description,
+    assignee,
+    category
+  ) {
     const newTask = {
       id: Math.floor(Math.random() * 900000) + 100000,
       title,
@@ -13,6 +21,8 @@ export function TasksProvider({ children }) {
       status,
       priority,
       description,
+      assignee,
+      category,
     };
 
     setTasks((current) => [...current, newTask]);
@@ -22,11 +32,29 @@ export function TasksProvider({ children }) {
     setTasks((current) => current.filter((task) => task.id !== id));
   }
 
-  function editTask(title, deadline, status, priority, description, id) {
+  function editTask(
+    title,
+    deadline,
+    status,
+    priority,
+    description,
+    assignee,
+    category,
+    id
+  ) {
     setTasks((current) =>
       current.map((task) =>
         task.id === id
-          ? { id, title, deadline, status, description, priority }
+          ? {
+              id,
+              title,
+              deadline,
+              status,
+              description,
+              priority,
+              assignee,
+              category,
+            }
           : task
       )
     );
