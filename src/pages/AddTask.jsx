@@ -1,4 +1,4 @@
-import FormContainer from "../components/FormContainer";
+import FormContainer from "../ui/form/FormContainer";
 
 export default function AddTask() {
   return (

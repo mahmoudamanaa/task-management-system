@@ -3,13 +3,13 @@ import styles from "./Form.module.css";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useTasks } from "../contexts/TasksContext";
+import { useTasks } from "../../contexts/TasksContext";
 import { useNavigate } from "react-router";
 import Input from "./Input";
 import Select from "./Select";
 import TextArea from "./TextArea";
 import Button from "./Button";
-import { usePopup } from "../contexts/PopupContext";
+import { usePopup } from "../../contexts/PopupContext";
 
 const schema = yup.object().shape({
   title: yup.string().required(),
@@ -43,6 +43,22 @@ const selects = [
     options: [
       { value: "Urgent", text: "Urgent" },
       { value: "Normal", text: "Normal" },
+    ],
+  },
+  {
+    name: "assignee",
+    options: [
+      { value: "Mohamed", text: "Mohamed" },
+      { value: "Mahmoud", text: "Mahmoud" },
+      { value: "Ahmed", text: "Ahmed" },
+    ],
+  },
+  {
+    name: "category",
+    options: [
+      { value: "Frontend", text: "Frontend" },
+      { value: "Backend", text: "Backend" },
+      { value: "UI/UX", text: "UI/UX" },
     ],
   },
 ];
@@ -84,6 +100,8 @@ export default function Form({ type, task }) {
         data.status,
         data.priority,
         data.description,
+        data.assignee,
+        data.category,
         task.id
       );
       closePopup();
@@ -93,7 +111,9 @@ export default function Form({ type, task }) {
         data.deadline,
         data.status,
         data.priority,
-        data.description
+        data.description,
+        data.assignee,
+        data.category
       );
       navigate("/");
     }
