@@ -5,6 +5,7 @@ import { useTasks } from "../../contexts/TasksContext";
 import { usePopup } from "../../contexts/PopupContext";
 import Form from "../../ui/form/Form";
 import { useDrag } from "react-dnd";
+import TaskView from "./TaskView";
 
 export default function TaskItem({ task, backlog }) {
   const {
@@ -29,11 +30,21 @@ export default function TaskItem({ task, backlog }) {
   const { deleteTask } = useTasks();
   const { openPopup } = usePopup();
 
-  const popupElement = <Form type="edit" task={task} />;
+  const editPopupElement = <Form type="edit" task={task} />;
+  const viewPopupElement = <TaskView task={task} />;
 
   const buttons = [
-    { type: "button", text: "Edit", onClick: () => openPopup(popupElement) },
+    {
+      type: "button",
+      text: "Edit",
+      onClick: () => openPopup(editPopupElement),
+    },
     { type: "button", text: "Delete", onClick: () => deleteTask(id) },
+    {
+      type: "button",
+      text: "View",
+      onClick: () => openPopup(viewPopupElement),
+    },
   ];
 
   return (
