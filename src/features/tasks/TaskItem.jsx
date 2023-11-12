@@ -4,6 +4,7 @@ import Button from "../../ui/form/Button";
 import { useTasks } from "../../contexts/TasksContext";
 import { usePopup } from "../../contexts/PopupContext";
 import Form from "../../ui/form/Form";
+import { useDrag } from "react-dnd";
 
 export default function TaskItem({ task, backlog }) {
   const {
@@ -17,6 +18,14 @@ export default function TaskItem({ task, backlog }) {
     id,
   } = task;
 
+  const [{ isDragging }, drag] = useDrag({
+    type: "TASK",
+    item: { id: task.id },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  });
+
   const { deleteTask } = useTasks();
   const { openPopup } = usePopup();
 
@@ -29,6 +38,10 @@ export default function TaskItem({ task, backlog }) {
 
   return (
     <div
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.5 : 1,
+      }}
       className={`${styles.taskItem} ${backlog ? styles.taskItemBacklog : ""}`}
     >
       <h3>{title}</h3>
