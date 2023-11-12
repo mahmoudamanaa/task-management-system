@@ -60,8 +60,16 @@ export function TasksProvider({ children }) {
     );
   }
 
+  function editTaskStatus(status, id) {
+    setTasks((current) =>
+      current.map((task) => (task.id === id ? { ...task, id, status } : task))
+    );
+  }
+
   return (
-    <TasksContext.Provider value={{ tasks, addTask, deleteTask, editTask }}>
+    <TasksContext.Provider
+      value={{ tasks, addTask, deleteTask, editTask, editTaskStatus }}
+    >
       {children}
     </TasksContext.Provider>
   );
