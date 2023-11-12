@@ -1,0 +1,34 @@
+.taskView h1 {
+  font-size: 2rem;
+}
+
+.taskView .viewFlex {
+  display: flex;
+  gap: 1rem;
+}
+
+.taskView .priority {
+  background-color: var(--yellow);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.taskView .status {
+  background-color: var(--yellow);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--darkblue);
+}
+
+.taskView .description {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--darkblue);
+  padding: 0.8rem;
+}
